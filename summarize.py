@@ -1,24 +1,26 @@
 import os
-import openai
+from openai import OpenAI
 from dotenv import load_dotenv
 
-# Load your OpenAI API key from .env
+# Load environment variables from .env
 load_dotenv()
-openai.api_key = os.getenv("OPENAI_API_KEY")
+
+# Create OpenAI client using API key from .env
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 def summarize_article(text):
     if not text or len(text.strip()) < 20:
         return "Not enough content to summarize."
 
     try:
-        response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
+        response = client.chat.completions.create(
+            model="gpt-3.5-turbo",  # or "gpt-4" if you have access
             messages=[
-                {"role": "system", "content": "You are a helpful assistant that summarizes news articles into 1-2 sentences."},
+                {"role": "system", "content": "You are a helpful assistant that summarizes news articles in 1-2 sentences."},
                 {"role": "user", "content": f"Summarize this article:\n\n{text}"}
             ],
             max_tokens=100
         )
-        return response['choices'][0]['message']['content']
+        return response.choices[0].message.content.strip()
     except Exception as e:
         return f"Error: {e}"
