@@ -32,20 +32,20 @@ The process is scheduled to run daily using Windows Task Scheduler.
 
 ##  File Overview
 
-| File             | Purpose                                        |
-|------------------|------------------------------------------------|
-| `fetch_news.py`  | Main script: fetches, summarizes, and emails news |
-| `summarize.py`   | Summarizes article content using OpenAI API    |
-| `send_email.py`  | Formats and sends the email using `smtplib`    |
-| `.env`           | Stores sensitive credentials (ignored by Git)  |
-| `requirements.txt` | Lists required Python packages                |
-| `README.md`      | Project overview and instructions              |
+| File             | Purpose                                        
+
+| `fetch_news.py`  Main script: fetches, summarizes, and emails news 
+| `summarize.py`    Summarizes article content using OpenAI API    
+| `send_email.py`   Formats and sends the email using `smtplib`    
+| `.env`            Stores sensitive credentials (ignored by Git)  
+| `requirements.txt`  Lists required Python packages               
+| `README.md`       Project overview and instructions              
 
 ---
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
-### 1. Install Dependencies
+# 1. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
