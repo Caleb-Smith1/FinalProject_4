@@ -1,10 +1,10 @@
-# 📰 AI-Powered News Newsletter Generator
+#  AI-Powered News Newsletter Generator
 
-This project is a Python-based automation tool that fetches the latest technology news, summarizes each article using OpenAI’s GPT model, and emails a clean, concise news digest daily. It is designed to keep users informed with minimal time investment.
+The goal of this project is to create an AI-Powered Newsletter Generator that automates the process of keeping users informed about the latest news and emails a clean, concise news digest daily. 
 
 ---
 
-## ✨ Features
+##  Features
 
 - Retrieves top headlines from NewsAPI  
 - Summarizes articles using OpenAI’s GPT (v1+)  
