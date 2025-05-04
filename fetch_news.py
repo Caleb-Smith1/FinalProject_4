@@ -1,3 +1,4 @@
+# Import required libraries and custom modules for fetching, summarizing, and emailing news
 import os
 import requests
 from dotenv import load_dotenv
