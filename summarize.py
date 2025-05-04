@@ -8,6 +8,8 @@ load_dotenv()
 # Create OpenAI client using API key from .env
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
+# Sends article content to OpenAI and returns a short summary that will be sent through email
+
 def summarize_article(text):
     if not text or len(text.strip()) < 20:
         return "Not enough content to summarize."
@@ -21,6 +23,9 @@ def summarize_article(text):
             ],
             max_tokens=100
         )
+
+        # Returns the summary from OpenAI, or an error message if the request fails
+        
         return response.choices[0].message.content.strip()
     except Exception as e:
         return f"Error: {e}"
