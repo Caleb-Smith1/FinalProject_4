@@ -8,6 +8,9 @@ from send_email import send_newsletter
 load_dotenv()
 NEWS_API_KEY = os.getenv("NEWS_API_KEY")
 
+#This function function uses the newsapi key to to send a request to get the top 
+# technological news articles from the United States
+
 def fetch_news():
     url = 'https://newsapi.org/v2/top-headlines'
     params = {
@@ -16,7 +19,9 @@ def fetch_news():
         'pageSize': 5,
         'apiKey': NEWS_API_KEY
     }
-
+# This is used in my code to actually send the request to the NewsAPI server and then 
+# my code extracts the title, URL, and content from each one
+    
     response = requests.get(url, params=params)
 
     if response.status_code != 200:
@@ -29,6 +34,8 @@ def fetch_news():
 if __name__ == "__main__":
     news_articles = fetch_news()
     summaries = []
+    
+## Send each article's content to OpenAI, summarize it, and print the result in the terminal
 
     for i, (title, url, content) in enumerate(news_articles, 1):
         summary = summarize_article(content)

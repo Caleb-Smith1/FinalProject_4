@@ -7,30 +7,30 @@ The goal of this project is to create an AI-Powered Newsletter Generator that au
 ##  Features
 
 - Retrieves top headlines from NewsAPI  
-- Summarizes articles using OpenAI’s GPT (v1+)  
-- Sends a well-formatted email digest using Gmail  
+- Summarizes articles using OpenAI’s GPT   
+- Sends a well-formatted email through Gmail  
 - Automatically runs daily via Windows Task Scheduler  
 - Uses a `.env` file to securely store API keys and credentials  
 
 ---
 
-## 🔧 How It Works
+#  How It Works
 
-### 1. **Fetching News**
+# 1. **Fetching News**
 Uses NewsAPI to retrieve the top 5 U.S. technology headlines.
 
-### 2. **Summarizing Articles**
+# 2. **Summarizing Articles**
 Each article’s content is summarized using OpenAI's GPT-3.5, reduced to 1–2 concise sentences.
 
-### 3. **Email Formatting and Delivery**
+# 3. **Email Formatting and Delivery**
 Summaries are formatted and emailed using Python’s built-in `smtplib`.
 
-### 4. **Automation**
+# 4. **Automation**
 The process is scheduled to run daily using Windows Task Scheduler.
 
 ---
 
-## 📁 File Overview
+##  File Overview
 
 | File             | Purpose                                        |
 |------------------|------------------------------------------------|
