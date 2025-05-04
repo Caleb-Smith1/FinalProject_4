@@ -1,6 +1,6 @@
 #  AI-Powered News Newsletter Generator
 
-The goal of this project is to create an AI-Powered Newsletter Generator that automates the process of keeping users informed about the latest news and emails a clean, concise news digest daily. 
+The goal of this project is to create an AI-Powered Newsletter Generator that automates the process of keeping users informed about the latest news and emails a clean, concise news summary daily. 
 
 ---
 
