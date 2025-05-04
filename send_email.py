@@ -10,6 +10,8 @@ EMAIL_ADDRESS = os.getenv("EMAIL_ADDRESS")
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 RECEIVER_EMAIL = os.getenv("RECEIVER_EMAIL")
 
+# These values come from the .env file and are hidden from GitHub using .gitignore
+
 def send_newsletter(summaries):
     msg = MIMEMultipart()
     msg['From'] = EMAIL_ADDRESS
@@ -22,6 +24,7 @@ def send_newsletter(summaries):
         body += f"{i}. {title}\n{url}\nSummary: {summary}\n\n"
 
     msg.attach(MIMEText(body, 'plain'))
+# Connect to gmail using built in smtplib and sends the email. 
 
     try:
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as server:
